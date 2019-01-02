@@ -1,7 +1,6 @@
 <?php
 namespace Concrete\Package\CommunityStoreShippingTiered\Src\CommunityStore\Shipping\Method\Types;
 
-use Package;
 use Core;
 use Database;
 use Concrete\Package\CommunityStore\Src\CommunityStore\Shipping\Method\ShippingMethodTypeMethod;
@@ -9,30 +8,29 @@ use Concrete\Package\CommunityStore\Src\CommunityStore\Cart\Cart as StoreCart;
 use Concrete\Package\CommunityStore\Src\CommunityStore\Utilities\Calculator as StoreCalculator;
 use Concrete\Package\CommunityStore\Src\CommunityStore\Customer\Customer as StoreCustomer;
 use Concrete\Package\CommunityStore\Src\CommunityStore\Shipping\Method\ShippingMethodOffer as StoreShippingMethodOffer;
+use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @Entity
- * @Table(name="CommunityStoreTieredMethods")
+ * @ORM\Entity
+ * @ORM\Table(name="CommunityStoreTieredMethods")
  */
 class TieredShippingMethod extends ShippingMethodTypeMethod
 {
-
     /**
-     * @Column(type="float")
+     * @ORM\Column(type="float")
      */
     protected $minimumAmount;
 
     /**
-     * @Column(type="float")
+     * @ORM\Column(type="float")
      */
     protected $maximumAmount;
 
     /**
-     * @Column(type="text",nullable=true)
+     * @ORM\Column(type="text",nullable=true)
      */
     protected $countries;
-
-
+    
     public function setMinimumAmount($minAmount)
     {
         $this->minimumAmount = $minAmount;

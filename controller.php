@@ -12,6 +12,10 @@ class Controller extends Package
     protected $appVersionRequired = '8.0';
     protected $pkgVersion = '2.0';
 
+    protected $pkgAutoloaderRegistries = array(
+        'src/CommunityStore' => 'Concrete\Package\CommunityStoreShippingTiered\Src\CommunityStore',
+    );
+
     public function getPackageDescription()
     {
         return t("Community Store Shipping Method allowing tiered pricing for weight ranges");

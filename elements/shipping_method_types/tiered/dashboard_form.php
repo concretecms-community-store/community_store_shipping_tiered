@@ -24,7 +24,7 @@ $co = Core::make('helper/lists/countries');
 <div class="row">
     <div class="col-xs-12 col-sm-6">
         <div class="form-group">
-            <?= $form->label('minimumAmount', t("Minimum Purchase Amount for this rate to apply")); ?>
+            <?= $form->label('minimumAmount', t('Minimum Purchase Amount for this rate to apply')); ?>
             <div class="input-group">
                 <div class="input-group-addon">
                     <?= Config::get('community_store.symbol'); ?>
@@ -35,7 +35,9 @@ $co = Core::make('helper/lists/countries');
     </div>
     <div class="col-xs-12 col-sm-6">
         <div class="form-group">
-            <?= $form->label('maximumAmount', t("Maximum Purchase Amount for this rate to apply")); ?>
+            <?= $form->label('maximumAmount', t('Maximum Purchase Amount for this rate to apply')); ?>
+            <i class="fa fa-question-circle launch-tooltip"
+               data-original-title="<?=t('Use a value of 0 for no limit')?>"></i>
             <div class="input-group">
                 <div class="input-group-addon">
                     <?= Config::get('community_store.symbol'); ?>

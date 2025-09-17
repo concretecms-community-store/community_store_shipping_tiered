@@ -26,7 +26,7 @@ $co = Core::make('helper/lists/countries');
         <div class="form-group">
             <?= $form->label('minimumAmount', t("Minimum Purchase Amount for this rate to apply")); ?>
             <div class="input-group">
-                <div class="input-group-addon">
+                <div class="input-group-addon input-group-text">
                     <?= Config::get('community_store.symbol'); ?>
                 </div>
                 <?= $form->text('minimumAmount', $smtm->getMinimumAmount() ? $smtm->getMinimumAmount() : '0'); ?>
@@ -37,7 +37,7 @@ $co = Core::make('helper/lists/countries');
         <div class="form-group">
             <?= $form->label('maximumAmount', t("Maximum Purchase Amount for this rate to apply")); ?>
             <div class="input-group">
-                <div class="input-group-addon">
+                <div class="input-group-addon input-group-text">
                     <?= Config::get('community_store.symbol'); ?>
                 </div>
                 <?= $form->text('maximumAmount', $smtm->getMaximumAmount() ? $smtm->getMaximumAmount() : '0'); ?>
@@ -66,7 +66,7 @@ $co = Core::make('helper/lists/countries');
                     <div class="input-group" >
                     <input name="weight[]" type="text" class="form-control ccm-input-text"
                            value="<?php echo $rate['weight']; ?>"/>
-                        <div class="input-group-addon"><?= Config::get('community_store.weightUnit')?></div>
+                        <div class="input-group-addon input-group-text"><?= Config::get('community_store.weightUnit')?></div>
                     </div>
 
                 </div>
@@ -81,7 +81,7 @@ $co = Core::make('helper/lists/countries');
                         </div>
                         <div class="form-group">
                             <div class="input-group">
-                                <div class="input-group-addon">
+                                <div class="input-group-addon  input-group-text">
                                     <?= Config::get('community_store.symbol'); ?>
                                 </div>
                                 <input name="rate[]" type="text" class="form-control ccm-input-text" placeholder="<?php echo t('Shipping Rate'); ?>" value="<?php echo $rate['rate']; ?>"/>

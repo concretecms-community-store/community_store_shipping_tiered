@@ -2,7 +2,7 @@
 
 namespace Concrete\Package\CommunityStoreShippingTiered;
 
-use Package;
+use Concrete\Core\Package\Package;
 use Whoops\Exception\ErrorException;
 use Concrete\Package\CommunityStore\Src\CommunityStore\Shipping\Method\ShippingMethodType as StoreShippingMethodType;
 
@@ -10,7 +10,7 @@ class Controller extends Package
 {
     protected $pkgHandle = 'community_store_shipping_tiered';
     protected $appVersionRequired = '8.0';
-    protected $pkgVersion = '2.0';
+    protected $pkgVersion = '2.1';
 
     protected $pkgAutoloaderRegistries = array(
         'src/CommunityStore' => 'Concrete\Package\CommunityStoreShippingTiered\Src\CommunityStore',
@@ -47,4 +47,3 @@ class Controller extends Package
     }
 
 }
-?>

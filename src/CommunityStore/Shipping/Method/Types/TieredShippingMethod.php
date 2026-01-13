@@ -75,7 +75,7 @@ class TieredShippingMethod extends ShippingMethodTypeMethod
 
     private function addOrUpdate($type, $data)
     {
-        if ($type == "update") {
+        if ($type === 'update') {
             $sm = $this;
         } else {
             $sm = new self();
@@ -83,8 +83,8 @@ class TieredShippingMethod extends ShippingMethodTypeMethod
         // do any saves here
         //$sm->setRate($data['rate']);
 
-        $sm->setMinimumAmount($data['minimumAmount']);
-        $sm->setMaximumAmount($data['maximumAmount']);
+        $sm->setMinimumAmount($data['minimumAmount']?:0);
+        $sm->setMaximumAmount($data['maximumAmount']?:0);
 
 
 
